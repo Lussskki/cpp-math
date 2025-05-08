@@ -1,15 +1,22 @@
-
 #include <iostream>
 
 using namespace std;
 
-int main () {
-    int number, min, max, sum = 0;
+int main() {
+    int number;
+    long long factorial = 1;
 
-    cin >> min >> max;
+    cout << "Enter a number: ";
+    cin >> number;
 
-    for (number = min; number <= max; number++) {
-        sum += number;
+    if (number < 0) {
+        cout << "Factorial is not defined for negative numbers." << endl;
+    } else {
+        for (int i = 1; i <= number; i++) {
+            factorial *= i;
+        }
+        cout << "Factorial of " << number << " is " << factorial << endl;
     }
-    cout << sum <<endl;
+
+    return 0;
 }
